@@ -1,136 +1,127 @@
 <!Doctype html>
 <html>
-	<head>
-		<title>
-			Hi-Tech Solutions
-		</title>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<!-- Import Google Fonts -->
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!-- Import materialise css -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<style>
-			h3 {
-				  display: inline-block;
-				  padding: 10px;
-
-				  border-top-left-radius: 10px;
-				  border-top-right-radius: 10px;
-				}
-
-				.full-screen 
-				{
-				  background-size: cover;
-				  background-position: center;
-				  background-repeat: no-repeat;
-				}
-
-				.overlay 
-				{
-				    position: absolute;
-				    width: 100%;
-				    height: 100%;
-				    z-index: 2;
-				    background-color: #080d15;
-				    opacity: .3;
-				}
-		</style>	
-	</head>
-
-	<body>
-
-		<div id="mycarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#mycarousel" data-slide-to="1"></li>
-    <li data-target="#mycarousel" data-slide-to="2"></li>
-    <li data-target="#mycarousel" data-slide-to="3"></li>
-    <li data-target="#mycarousel" data-slide-to="4"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item">
-    	<div class="overlay"></div>
-      <img src="images/ACCESS_CARD.jpg" data-color="black" alt="Access Card">
-      <div class="carousel-caption">
-        <h3> Access Card</h3>
-      </div>
-    </div>
-    <div class="item">
-    	<div class="overlay"></div>
-      <img src="images/CCTV1.jpg" data-color="black" alt="CCTV Camera">
-      <div class="carousel-caption">
-        <h3>CCTV Camera</h3>
-      </div>
-    </div>
-    <div class="item">
-    	<div class="overlay"></div>
-      <img src="images/CCTV2.jpg" data-color="black" alt="CCTV Camera">
-      <div class="carousel-caption">
-        <h3>CCTV Camera</h3>
-      </div>
-    </div>
-    <div class="item">
-    	<div class="overlay"></div>
-      <img src="images/EM_LOCKS.jpg" data-color="black" alt="ElectroMagnetic Locks">
-      <div class="carousel-caption">
-        <h3>ElectroMagnetic Locks</h3>
-      </div>
-    </div>
-    <div class="item">
-    	<div class="overlay"></div>
-      <img src="images/VIDEO_DOOR_PHONE.jpg" data-color="black" alt="Video Door Phone">
-        <h3>Video Door Phone</h3>
-      </div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-			
-		<script type="text/javascript">
-			var $item = $('.carousel .item'); 
-			var $wHeight = $(window).height();
-			$item.eq(0).addClass('active');
-			$item.height($wHeight); 
-			$item.addClass('full-screen');
-
-			$('.carousel img').each(function() {
-			  var $src = $(this).attr('src');
-			  var $color = $(this).attr('data-color');
-			  $(this).parent().css({
-			    'background-image' : 'url(' + $src + ')',
-			    'background-color' : $color
-			  });
-			  $(this).remove();
-			});
-
-			$(window).on('resize', function (){
-			  $wHeight = $(window).height();
-			  $item.height($wHeight);
-			});
-
-			$('.carousel').carousel({
-			  interval: 6000,
-			  pause: "true"
-			});
-		</script>
-	</body>
+    <head>
+        <title>
+            Hi-Tech Solutions
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Import Google Fonts -->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Import bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Import Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Import bootstrap js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            h3 {
+            display: inline-block;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            }
+            .full-screen 
+            {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            }
+            .overlay 
+            {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-color: #080d15;
+            opacity: .3;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+                <li data-target="#mycarousel" data-slide-to="3"></li>
+                <li data-target="#mycarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active full-screen">
+                    <div class="overlay"></div>
+                    <img src="images/ACCESS_CARD.jpg" data-color="black" alt="Access Card">
+                    <div class="carousel-caption">
+                        <h3> Access Card</h3>
+                    </div>
+                </div>
+                <div class="item full-screen">
+                    <div class="overlay"></div>
+                    <img src="images/CCTV1.jpg" data-color="black" alt="CCTV Camera">
+                    <div class="carousel-caption">
+                        <h3>CCTV Camera</h3>
+                    </div>
+                </div>
+                <div class="item full-screen">
+                    <div class="overlay"></div>
+                    <img src="images/CCTV2.jpg" data-color="black" alt="CCTV Camera">
+                    <div class="carousel-caption">
+                        <h3>CCTV Camera</h3>
+                    </div>
+                </div>
+                <div class="item full-screen">
+                    <div class="overlay"></div>
+                    <img src="images/EM_LOCKS.jpg" data-color="black" alt="ElectroMagnetic Locks">
+                    <div class="carousel-caption">
+                        <h3>ElectroMagnetic Locks</h3>
+                    </div>
+                </div>
+                <div class="item full-screen">
+                    <div class="overlay"></div>
+                    <img src="images/VIDEO_DOOR_PHONE.jpg" data-color="black" alt="Video Door Phone">
+                    <div class="carousel-caption">
+                        <h3>Video Door Phone</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <script type="text/javascript">
+            var $item = $('.carousel .item'); 
+            var $wHeight = $(window).height();
+            // $item.eq(0).addClass('active');
+            $item.height($wHeight); 
+            // $item.addClass('full-screen');
+            
+            $('.carousel img').each(function() {
+              var $src = $(this).attr('src');
+              var $color = $(this).attr('data-color');
+              $(this).parent().css({
+                'background-image' : 'url(' + $src + ')',
+                'background-color' : $color
+              });
+              $(this).remove();
+            });
+            
+            $(window).on('resize', function (){
+              $wHeight = $(window).height();
+              $item.height($wHeight);
+            });
+            
+            $('.carousel').carousel({
+              interval: 6000,
+              pause: "false"
+            });
+        </script>
+    </body>
 </html>
-
