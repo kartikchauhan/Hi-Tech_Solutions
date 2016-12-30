@@ -12,7 +12,17 @@
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
         <style>
+        	.scroll-to-top
+        	{
+        		position:fixed;
+        		bottom: 40px;
+        		right:40px;
 
+        	}
+        	.brand
+        	{
+        		border: 2px solid #2196f3;
+        	}
         </style>
     </head>
     <body>
@@ -25,7 +35,7 @@
 		        	<li><a href="#">HOME</a></li>
 	        		<li><a href="#services">SERVICES</a></li>
 		        	<li><a href="#brands">BRANDS</a></li>
-		        	<li><a href="#">CLIENTS</a></li>
+		        	<li><a href="#clients">CLIENTS</a></li>
 		        	<li><a href="#">CONTACT US</a></li>
 		      	</ul>
 		    </div>
@@ -33,7 +43,7 @@
 	  	<!-- /Navigation Bar -->
 
 	  	<!-- Full Screen Carousel -->
-		  	<div class="carousel carousel-slider z-depth-2" data-indicators="true">
+		  	<div class="carousel carousel-slider z-depth-2 carousel-custom" data-indicators="true">
 		    	<a class="carousel-item" href="#two!">
 		    		<img src="http://lorempixel.com/800/400/food/2">
 	    		</a>
@@ -314,15 +324,33 @@
 	  	
 		<!-- /Code for Brands Navigation Container -->
 
-		<div class="carousel">
-		    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1"></a>
-		    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>
-		    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>
-		    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
-		    <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+		<!-- carousel for brands -->
+
+		<div class="carousel" id="clients">
+		    <a class="carousel-item" href="#one!"><img class="brand" src="images/brand1.jpg"></a>
+		    <a class="carousel-item" href="#two!"><img class="brand" src="images/brand2.jpg"></a>
+		    <a class="carousel-item" href="#three!"><img class="brand" src="images/brand3.jpg"></a>
+		    <a class="carousel-item" href="#four!"><img class="brand" src="images/brand4.jpg"></a>
+		    <a class="carousel-item" href="#five!"><img class="brand" src="images/brand5.jpg"></a>
 	  	</div>
+
+	  	<!-- /carousel for brands -->
+
 		<!-- /Code for Brands -->
 
+		<!-- Code for Clients -->
+
+		<div class="row">
+			<div class="card-panel blue z-depth-2">
+				<div class="card-content white-text center-align">
+					<h5 class="card-title">CLIENTS</h5>
+					<i class="material-icons">people</i>
+				</div>
+			</div>
+		</div>
+		<!-- /Code for Clients -->
+
+		<a class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
 	  	<!-- Import Jquery -->
   		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
@@ -337,6 +365,18 @@
 
      			$('.carousel').carousel();
 
+    //  			var navHeight = $('nav').height();
+    //  			function thirty_pc()
+    //  			{
+    //  				var windowHeight = $(window).height();
+ 			// 		var carouselHeight = windowHeight-navHeight;
+ 			// 		var heightPercent = Math.round((carouselHeight*100)/windowHeight);
+
+				//     $(".carousel-custom").css('height', '' + heightPercent);
+				// }
+
+				//     thirty_pc();
+				//     $(window).bind('resize', thirty_pc);
      			// function for triggering modal
      			$('.modal').modal();
 
@@ -352,6 +392,25 @@
 				        	return false;
 				      	}
 				    }
+			  	});
+
+			  	// Code for scroll to top button
+			  	$(window).scroll(function(){
+			  		if($(window).scrollTop()>300)
+			  		{
+			  			$('.scroll-to-top').fadeIn('fast');
+			  		}
+			  		else
+			  		{
+			  			$('.scroll-to-top').fadeOut('fast');
+			  		}
+			  	});
+
+			  	$('.scroll-to-top').click(function(){
+			  		$('body').animate({
+			  			scrollTop:0
+			  		}, 1000);
+			  		return false;
 			  	});
 
     		});
