@@ -23,6 +23,20 @@
         	{
         		border: 2px solid #2196f3;
         	}
+        	.services-custom
+        	{
+        		position: relative;
+        		top:10px;
+        	}
+        	.slider .indicators .indicator-item.active
+        	{
+        		background-color: #2196f3;
+        	}
+        	.envelope
+        	{
+        		padding-left: 50px;
+        	}
+
         </style>
     </head>
     <body>
@@ -36,38 +50,65 @@
 	        		<li><a href="#services">SERVICES</a></li>
 		        	<li><a href="#brands">BRANDS</a></li>
 		        	<li><a href="#clients">CLIENTS</a></li>
-		        	<li><a href="#">CONTACT US</a></li>
+		        	<li><a href="#contact_us">CONTACT US</a></li>
 		      	</ul>
 		    </div>
 	  	</nav>
 	  	<!-- /Navigation Bar -->
 
 	  	<!-- Full Screen Carousel -->
-		  	<div class="carousel carousel-slider z-depth-2 carousel-custom" data-indicators="true">
-		    	<a class="carousel-item" href="#two!">
-		    		<img src="http://lorempixel.com/800/400/food/2">
-	    		</a>
-			    <a class="carousel-item" href="#three!">
-			    	<img src="images/ACCESS_CARD.jpg">
-			    </a>
-			    <a class="carousel-item" href="#four!">
-			   		<img src="images/CCTV1.jpg">
-			    </a>
-			    <a class="carousel-item" href="#four!">
-			    	<img src="images/CCTV2.jpg">
-			    </a>
-			    <a class="carousel-item" href="#four!">
-			    	<img src="images/EM_LOCKS.jpg">
-			    </a>
-			    <a class="carousel-item" href="#four!">
-			    	<img src="images/VIDEO_DOOR_PHONE.jpg">
-			    </a>
-		  	</div>
+		  	<div class="slider fullscreen z-depth-2 silder-custom">
+    <ul class="slides">
+      <li>
+        <img src="images/ACCESS_CARD.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/CCTV1.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/INTERCOMM.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/CCTV2.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/EM_LOCKS.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/VIDEO_DOOR_PHONE.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 	  	<!-- /Full Screen Carousel -->
 
 	  	<!-- Services -->
 
 	  		<!-- Code for services navigation container -->
+	  		<div class="section services-custom">
 			<div class="row">
 	  			<div class="card-panel blue z-depth-2">
 	  				<div class="card-content white-text center-align">
@@ -75,6 +116,7 @@
   						<i class="material-icons">settings</i>
   					</div>
 	  			</div>
+  			</div>
   			</div>
   			<!-- /Code for services navigation container -->
 
@@ -326,7 +368,7 @@
 
 		<!-- carousel for brands -->
 
-		<div class="carousel" id="clients">
+		<div class="carousel">
 		    <a class="carousel-item" href="#one!"><img class="brand" src="images/brand1.jpg"></a>
 		    <a class="carousel-item" href="#two!"><img class="brand" src="images/brand2.jpg"></a>
 		    <a class="carousel-item" href="#three!"><img class="brand" src="images/brand3.jpg"></a>
@@ -340,7 +382,9 @@
 
 		<!-- Code for Clients -->
 
-		<div class="row">
+		<!-- Code for Clients Navigation Section -->
+
+		<div class="row" id="clients">
 			<div class="card-panel blue z-depth-2">
 				<div class="card-content white-text center-align">
 					<h5 class="card-title">CLIENTS</h5>
@@ -348,9 +392,94 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- /Code for Clients Navigation Section -->
+
+		<!-- Carousel for Clients -->
+
+		<div class="container section">
+			<div class="section">
+				<div class="slider">
+    				<ul class="slides z-depth-2">
+     					<li>
+        					<img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        					<div class="caption center-align">
+					        	<h3>This is our big Tagline!</h3>
+			        	  		<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+					        </div>
+					      </li>
+      					<li>
+        					<img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        					<div class="caption left-align">
+          						<h3>Left Aligned Caption</h3>
+          						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        					</div>
+      					</li>
+      
+   					</ul>
+  				</div>
+  			</div>
+  		</div>
+
+  		<!-- Carousel for Clients -->
+
 		<!-- /Code for Clients -->
 
+		<!-- Code for Contact Us -->
+
+		<!-- Code for Contact_us navigation section -->
+
+		<div class="row" id="contact_us">
+			<div class="card-panel blue z-depth-2">
+				<div class="card-content white-text center-align">
+					<h5 class="card-title">CONTACT US</h5>
+					<i class="material-icons">contact_mail</i>
+				</div>
+			</div>
+		</div>
+
+		<!-- /Code for Contact_us navigation section -->
+
+		<!-- Code for Contact_us text -->
+		<div class="container">
+			<div class="row valign-wrapper">
+				<div class="col s8">
+					<div class="row valign">
+						<h5 class="blue-text">Get in touch with us</h5>
+						<div class="divider blue"></div>
+						<p class="left-align">
+						 We are specialized in the sale of surveillance and security electronic equipment.<br><br>
+						We offer a professional commercial supply and installation service in Bijnor.<br>
+						This includes CCTV equipment, access control products, electronic safe, at the best possible price with the best possible support.<br><br>
+						We are leaders in giving satisfaction and service in the provisions of quality cost effective security systems, contact us for more details.</p>
+					</div>
+				</div>
+
+				<div class="col s4">
+					<div class="envelope valign" >
+						<a href="#mail"><img class="responsive-img z-depth-2 hoverable" src="images/mail2.png"></a>
+					</div>
+				</div>
+			</div>	
+		</div>	
+
+		<div class="modal" id="mail">
+			<div class="modal-content">
+				<input class="z-depth-2" type="text" name="firstName">
+				<input class="z-depth-2" type="text" name="lastName">
+				<input class="z-depth-2" type="email" name="email">
+			</div>
+			<div class="modal-footer">
+				<div class="modal-close right">Close</div>
+			</div>
+		</div>
+
+		<!-- Code for Contact_us text -->			
+
+		<!-- Code for Contact Us -->
+
 		<a class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
+
 	  	<!-- Import Jquery -->
   		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
@@ -361,22 +490,11 @@
     		$(document).ready(function(){
 
     			// function for full screen carousel
-     			$('.carousel.carousel-slider').carousel({full_width: true});
+     			// $('.carousel.carousel-slider').carousel({full_width: true});
+     			$('.slider').slider();
 
      			$('.carousel').carousel();
 
-    //  			var navHeight = $('nav').height();
-    //  			function thirty_pc()
-    //  			{
-    //  				var windowHeight = $(window).height();
- 			// 		var carouselHeight = windowHeight-navHeight;
- 			// 		var heightPercent = Math.round((carouselHeight*100)/windowHeight);
-
-				//     $(".carousel-custom").css('height', '' + heightPercent);
-				// }
-
-				//     thirty_pc();
-				//     $(window).bind('resize', thirty_pc);
      			// function for triggering modal
      			$('.modal').modal();
 
