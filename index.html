@@ -51,6 +51,12 @@
 			    width:100%;
 			    position:absolute;
 			}
+			.overlay
+			{
+				display: block;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.8);
+			}
 
         </style>
     </head>
@@ -72,52 +78,54 @@
 	  	<!-- /Navigation Bar -->
 
 	  	<!-- Full Screen Carousel -->
-		  	<!-- <div class="slider fullscreen z-depth-2 silder-custom">
-    <ul class="slides">
-      <li>
-        <img src="images/ACCESS_CARD.jpg">
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/CCTV1.jpg">
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/INTERCOMM.jpg">
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/CCTV2.jpg">
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/EM_LOCKS.jpg">
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/VIDEO_DOOR_PHONE.jpg">
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div> -->
+
+	  	<div class="slider z-depth-2">
+    		<ul class="slides">    			
+      			<li>
+        			<img src="images/ACCESS_CARD.jpg">
+        			<div class="overlay"></div>
+        			<div class="caption center-align">
+          				<h3>This is our big Tagline!</h3>
+          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			</div>
+			    </li>
+      			<li>
+        			<img src="images/CCTV1.jpg">
+        			<div class="caption left-align">
+          				<h3>Left Aligned Caption</h3>
+          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			</div>
+      			</li>
+      			<li>
+    				<img class="change-background-size"src="images/INTERCOMM.jpg">
+        			<div class="caption right-align">
+          				<h3>Right Aligned Caption</h3>
+      					<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			</div>
+      			</li>
+      			<li>
+        			<img class="change-background-size"src="images/CCTV2.jpg">
+        			<div class="caption center-align">
+          				<h3>This is our big Tagline!</h3>
+          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			</div>
+      			</li>
+      			<li>
+        			<img class="change-background-size" src="images/EM_LOCKS.jpg">
+        			<div class="caption center-align">
+          				<h3>This is our big Tagline!</h3>
+          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			</div>
+      			</li>
+      			<li>
+        			<img class="change-background-size" src="images/VIDEO_DOOR_PHONE.jpg">
+    				<div class="caption center-align">
+          				<h3>This is our big Tagline!</h3>
+          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			</div>
+      			</li>
+    		</ul>
+  		</div>
 	  	<!-- /Full Screen Carousel -->
 
 	  	<!-- Services -->
@@ -428,7 +436,7 @@
 
 		<!-- Code for Clients Navigation Section -->
 
-		<div class="row" id="clients">
+		<div class="row">
 			<div class="card-panel blue z-depth-2">
 				<div class="card-content white-text center-align">
 					<h5 class="card-title">CLIENTS</h5>
@@ -441,25 +449,38 @@
 
 		<!-- Carousel for Clients -->
 
-		<div class="container section">
+		<div class="container section"  id="clients">
 			<div class="section">
 				<div class="slider">
     				<ul class="slides z-depth-2">
      					<li>
-        					<img src="http://lorempixel.com/580/250/nature/1">
+        					<img src="images/indian_oil.jpg">
         					<div class="caption center-align">
 					        	<h3>This is our big Tagline!</h3>
 			        	  		<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
 					        </div>
 					      </li>
       					<li>
-        					<img src="http://lorempixel.com/580/250/nature/2">
+        					<img src="images/tvs_dealers.jpg">
         					<div class="caption left-align">
           						<h3>Left Aligned Caption</h3>
           						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         					</div>
       					</li>
-      
+      					<li>
+        					<img src="images/honda_dealers.jpg">
+        					<div class="caption left-align">
+          						<h3>Left Aligned Caption</h3>
+          						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        					</div>
+      					</li>
+      					<li>
+        					<img src="images/reliance.jpg">
+        					<div class="caption left-align">
+          						<h3>Left Aligned Caption</h3>
+          						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        					</div>
+      					</li>
    					</ul>
   				</div>
   			</div>
@@ -608,7 +629,7 @@
 			</div>
 		</footer>
 		<!-- /Footer -->
-		<a class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
+		<a style="z-index: 2" class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
 
 	  	<!-- Import Jquery -->
   		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -624,6 +645,26 @@
      			$('.slider').slider();
 
      			$('.carousel').carousel();
+
+     			var navHeight = $('nav').height();
+	  			var windowHeight = $(window).height();
+		  		var sliderHeight = windowHeight - navHeight;
+		  		var slidesHeight = sliderHeight - 30;		// 22 is the height of the indicators
+		  		$('.slider').css('height', sliderHeight);
+		  		$('.slides').css('height', slidesHeight);	
+		  		$('.change-background-size').each(function(){		// changing background-size of all images whose size is greater than required length
+		  			$(this).css('background-size', '100% 100%');
+		  		});
+		  		$('.overlay').css('height', 'slidesHeight');
+
+			  	$(window).resize(function(){
+		  			windowHeight = $(window).height();
+			  		sliderHeight = windowHeight - navHeight;
+			  		slidesHeight = sliderHeight - 30;		// 22 is the height of the indicators
+			  		$('.slider').css('height', sliderHeight);
+			  		$('.slides').css('height', slidesHeight);
+			  		$('.overlay').css('height', slidesHeight);
+			  	});
 
      			// function for smooth scrolling
 			  	$('.nav-headers').click(function() {
