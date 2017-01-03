@@ -61,11 +61,11 @@
 		    <div class="nav-wrapper container">
 		      	<a href="#" class="brand-logo">Logo</a>
 		      	<ul id="nav-mobile" class="right">
-		        	<li><a href="#">HOME</a></li>
-	        		<li><a href="#services">SERVICES</a></li>
-		        	<li><a href="#brands">BRANDS</a></li>
-		        	<li><a href="#clients">CLIENTS</a></li>
-		        	<li><a href="#contact_us">CONTACT US</a></li>
+		        	<li><a href="#" class="nav-headers">HOME</a></li>
+	        		<li><a href="#services" class="nav-headers">SERVICES</a></li>
+		        	<li><a href="#brands" class="nav-headers">BRANDS</a></li>
+		        	<li><a href="#clients" class="nav-headers">CLIENTS</a></li>
+		        	<li><a href="#contact_us" class="nav-headers">CONTACT US</a></li>
 		      	</ul>
 		    </div>
 	  	</nav>
@@ -611,7 +611,7 @@
 		<a class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
 
 	  	<!-- Import Jquery -->
-  		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
   		<!-- Import Materialize js -->
       	<script type="text/javascript" src="js/materialize.min.js"></script>
@@ -626,18 +626,18 @@
      			$('.carousel').carousel();
 
      			// function for smooth scrolling
-			  	// $('a[href*="#"]:not([href="#"])').click(function() {
-				  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				  //     	var target = $(this.hash);
-				  //     	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				  //     	if (target.length) {
-				  //       	$('html, body').animate({
-				  //         	scrollTop: target.offset().top
-				  //       	}, 1000);
-				  //       	return false;
-				  //     	}
-				  //   }
-			  	// });
+			  	$('.nav-headers').click(function() {
+				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				      	var target = $(this.hash);
+				      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				      	if (target.length) {
+				        	$('html, body').animate({
+				          	scrollTop: target.offset().top
+				        	}, 1000);
+				        	return false;
+				      	}
+				    }
+			  	});
 
      			// function for triggering modal
      			$('.modal').modal();
