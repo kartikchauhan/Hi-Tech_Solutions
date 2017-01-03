@@ -36,6 +36,21 @@
         	{
         		padding-left: 50px;
         	}
+        	.map-responsive
+        	{
+			    overflow:hidden;
+			    position:relative;
+			    height:400px;
+			    margin-bottom: 0;
+			}
+			.map-responsive iframe
+			{
+			    left:0;
+			    top:0;
+			    height:100%;
+			    width:100%;
+			    position:absolute;
+			}
 
         </style>
     </head>
@@ -57,58 +72,57 @@
 	  	<!-- /Navigation Bar -->
 
 	  	<!-- Full Screen Carousel -->
-		  	<div class="slider fullscreen z-depth-2 silder-custom">
+		  	<!-- <div class="slider fullscreen z-depth-2 silder-custom">
     <ul class="slides">
       <li>
-        <img src="images/ACCESS_CARD.jpg"> <!-- random image -->
+        <img src="images/ACCESS_CARD.jpg">
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="images/CCTV1.jpg"> <!-- random image -->
+        <img src="images/CCTV1.jpg">
         <div class="caption left-align">
           <h3>Left Aligned Caption</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="images/INTERCOMM.jpg"> <!-- random image -->
+        <img src="images/INTERCOMM.jpg">
         <div class="caption right-align">
           <h3>Right Aligned Caption</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="images/CCTV2.jpg"> <!-- random image -->
+        <img src="images/CCTV2.jpg">
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="images/EM_LOCKS.jpg"> <!-- random image -->
+        <img src="images/EM_LOCKS.jpg">
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
-        <img src="images/VIDEO_DOOR_PHONE.jpg"> <!-- random image -->
+        <img src="images/VIDEO_DOOR_PHONE.jpg">
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
           <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
     </ul>
-  </div>
+  </div> -->
 	  	<!-- /Full Screen Carousel -->
 
 	  	<!-- Services -->
 
 	  		<!-- Code for services navigation container -->
-	  		<div class="section services-custom">
 			<div class="row">
 	  			<div class="card-panel blue z-depth-2">
 	  				<div class="card-content white-text center-align">
@@ -116,7 +130,6 @@
   						<i class="material-icons">settings</i>
   					</div>
 	  			</div>
-  			</div>
   			</div>
   			<!-- /Code for services navigation container -->
 
@@ -203,7 +216,7 @@
 			<div class="row">
 
 				<!-- Code for RFID -->
-				<div class="col s3 m3 l3 offset-s1 offset-m1 offset-l1">
+				<div class="col s3 m3 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">widgets</i>
@@ -222,7 +235,7 @@
 				<!-- Code for RFID -->
 
 				<!-- Code for Access Card -->
-				<div class="col s4 m4 l4">
+				<div class="col s3 m3 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">credit_card</i>
@@ -258,6 +271,25 @@
   					</div>
 				</div>
 				<!-- /Code for EM Lock -->
+
+				<!-- Code for Flex Printing -->
+				<div class="col s3 m3 l3">
+  					<div class="card small z-depth-2 hoverable">
+  						<div class="card-image blue-text center-align">
+  							<i class="large material-icons">receipt</i>
+  						</div>
+  						<div class="card-content center-align blue-text">
+  							<div class="card-title">Flex Printing</div>
+  							<div class="divider"></div>
+  							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
+						</div>
+						<div class="card-action">
+							<a class="waves-effect waves-light btn blue" href="#modal_description_flex_printing"><i class="material-icons">description</i></a>
+							<a class="waves-effect waves-light btn blue" href="#modal_video_flex_printing"><i class="material-icons">videocam</i></a>
+						</div>
+  					</div>
+				</div>
+				<!-- /Code for Flex Printing -->
 
   			</div>
 
@@ -349,6 +381,18 @@
 	  	</div>
 	  	<!-- /Code for modal of EM Locks -->
 
+	  	<!-- Code for modal of EM Lock -->
+	  	<div id="modal_description_flex_printing" class="modal">
+	    	<div class="modal-content">
+	      		<h4>Flex Printing</h4>
+	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+	    	</div>
+	    	<div class="modal-footer">
+	    		<span class="modal-close right">Close</span>
+	    	</div>
+	  	</div>
+	  	<!-- /Code for modal of EM Locks -->
+
 	  	<!-- /Services Modals -->
 
 	  	<!-- Code for Brands -->
@@ -402,14 +446,14 @@
 				<div class="slider">
     				<ul class="slides z-depth-2">
      					<li>
-        					<img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        					<img src="http://lorempixel.com/580/250/nature/1">
         					<div class="caption center-align">
 					        	<h3>This is our big Tagline!</h3>
 			        	  		<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
 					        </div>
 					      </li>
       					<li>
-        					<img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        					<img src="http://lorempixel.com/580/250/nature/2">
         					<div class="caption left-align">
           						<h3>Left Aligned Caption</h3>
           						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -465,19 +509,78 @@
 
 		<div class="modal" id="mail">
 			<div class="modal-content">
+				<label for="firstName">First Name</label>
 				<input class="z-depth-2" type="text" name="firstName">
+				<label for="lastName">Last Name</label>
 				<input class="z-depth-2" type="text" name="lastName">
+				<label for="email">Email</label>
 				<input class="z-depth-2" type="email" name="email">
+				<label class="z-depth-2" for="query">
+				<textarea rows="4" name="query"></textarea>
 			</div>
 			<div class="modal-footer">
 				<div class="modal-close right">Close</div>
 			</div>
 		</div>
 
-		<!-- Code for Contact_us text -->			
+		<!-- /Code for Contact_us text -->			
 
-		<!-- Code for Contact Us -->
+		<!-- Code for embedded map -->
 
+		<div class="section map-responsive z-depth-2">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7207.7881177849595!2d78.58231265089724!3d29.20388309049231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bb3f4da5bc129%3A0x48a570a6c62b865b!2sRSP+Inter+College%2C+SH+49%2C+Seohara%2C+Uttar+Pradesh+246746!5e1!3m2!1sen!2sin!4v1483432727172" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>			
+
+		<!-- /Code for embedded map -->
+
+		<!-- /Code for Contact Us -->
+
+		<!-- Footer -->
+
+		<footer class="page-footer blue z-depth-2">
+			<div class="container">
+				<div class="row">
+					<div class="col s6 m6 l6">
+						<h5 class="white-text">Footer content goes here</h5>
+						<p class="white-text">Some additional content for footer</p>
+					</div>
+					<div class="col s3 m3 l3">
+						<h5 class="white-text">Contact Us</h5>
+						<div class="white-text">
+							<div class="valign-wrapper">
+								<div class="valign">
+									<i class="material-icons tiny">call</i> 01344 - 252960
+								</div>
+							</div>
+							<div class="valign-wrapper">
+								<div class="valign">
+									<i class="material-icons tiny">call</i> 8449491145
+								</div>
+							</div>
+							<div class="valign-wrapper">
+								<div class="valign">
+									<img src="images/whatsapp.png"> 9457191145
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s3 m3 l3">
+						<div class="white-text">
+							<h5>Connect socially via</h5>
+							<div class="valign-wrapper">
+								<img class="valign responsive-img" src="images/facebook.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2017 Hi-Tech Solutions
+				</div>
+			</div>
+		</footer>
+		<!-- /Footer -->
 		<a class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
 
 	  	<!-- Import Jquery -->
@@ -490,27 +593,27 @@
     		$(document).ready(function(){
 
     			// function for full screen carousel
-     			// $('.carousel.carousel-slider').carousel({full_width: true});
+     			$('.carousel.carousel-slider').carousel({full_width: true});
      			$('.slider').slider();
 
      			$('.carousel').carousel();
 
+     			// function for smooth scrolling
+			  	// $('a[href*="#"]:not([href="#"])').click(function() {
+				  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				  //     	var target = $(this.hash);
+				  //     	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				  //     	if (target.length) {
+				  //       	$('html, body').animate({
+				  //         	scrollTop: target.offset().top
+				  //       	}, 1000);
+				  //       	return false;
+				  //     	}
+				  //   }
+			  	// });
+
      			// function for triggering modal
      			$('.modal').modal();
-
-     			// function for smooth scrolling
-			  	$('a[href*="#"]:not([href="#"])').click(function() {
-				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				      	var target = $(this.hash);
-				      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				      	if (target.length) {
-				        	$('html, body').animate({
-				          	scrollTop: target.offset().top
-				        	}, 1000);
-				        	return false;
-				      	}
-				    }
-			  	});
 
 			  	// Code for scroll to top button
 			  	$(window).scroll(function(){
