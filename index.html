@@ -66,13 +66,21 @@
 	    <nav class="z-depth-2 blue">
 		    <div class="nav-wrapper container">
 		      	<a href="#" class="brand-logo">Logo</a>
-		      	<ul id="nav-mobile" class="right">
+		      	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      	<ul class="right hide-on-med-and-down">
 		        	<li><a href="#" class="nav-headers">HOME</a></li>
 	        		<li><a href="#services" class="nav-headers">SERVICES</a></li>
 		        	<li><a href="#brands" class="nav-headers">BRANDS</a></li>
 		        	<li><a href="#clients" class="nav-headers">CLIENTS</a></li>
 		        	<li><a href="#contact_us" class="nav-headers">CONTACT US</a></li>
 		      	</ul>
+		      	<ul class="side-nav" id="mobile-demo">
+		      		<li><a href="#" class="nav-headers">HOME</a></li>
+	        		<li><a href="#services" class="nav-headers">SERVICES</a></li>
+		        	<li><a href="#brands" class="nav-headers">BRANDS</a></li>
+		        	<li><a href="#clients" class="nav-headers">CLIENTS</a></li>
+		        	<li><a href="#contact_us" class="nav-headers">CONTACT US</a></li>
+	        	</ul>
 		    </div>
 	  	</nav>
 	  	<!-- /Navigation Bar -->
@@ -292,8 +300,8 @@
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
-							<a class="waves-effect waves-light btn blue" href="#modal_description_flex_printing"><i class="material-icons">description</i></a>
-							<a class="waves-effect waves-light btn blue" href="#modal_video_flex_printing"><i class="material-icons">videocam</i></a>
+							<a class="waves-effect waves-light btn blue" href="#modal_description_flex_printing" ><i class="material-icons">description</i></a>
+							<a class="waves-effect waves-light btn blue tooltipped" href="#modal_video_flex_printing" data-position="top" data-delay="50" data-tooltip="Video not available"><i class="material-icons">videocam</i></a>
 						</div>
   					</div>
 				</div>
@@ -365,7 +373,7 @@
 	  	<div id="modal_video_biometric_machine" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe id="player_video_biometric_machine" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -411,7 +419,7 @@
 	  	<div id="modal_video_RFID" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe id="player_video_RFID" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/gEQJxNDSKAE" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -434,7 +442,7 @@
 	  	<div id="modal_video_access_card" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe id="player_video_access_card" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -457,7 +465,7 @@
 	  	<div id="modal_video_em_lock" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe id="player_video_em_lock" width="854" height="480" src="https://www.youtube.com/embed/pYr5ZDBoWlo" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/SzaUG8qokLo" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -479,12 +487,10 @@
 
 	  	<div id="modal_video_flex_printing" class="modal">
 	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_flex_printing" width="854" height="480" src="https://www.youtube.com/embed/pYr5ZDBoWlo" frameborder="0" allowfullscreen></iframe>
- 				 </div>
+ 				 <p>Sorry, no video available right now</p>
 	    	</div>
 	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-flex-printing">Close</a>
+	    		<a class="waves-effect waves-light btn modal-close right tooltipped close-video-flex-printing">Close</a>
 	    	</div>
 	  	</div>
 	  	<!-- /Code for modal of Flex Printing -->
@@ -621,15 +627,17 @@
 				<div class="row">
 				    <form class="col s12" action="sendMail.php" method="post" enctype="multipart/form-data">
 				      	<div class="row">
-				       		<div class="input-field col s6">
+				       		<div class="input-field col s12">
 				          		<i class="material-icons prefix">account_circle</i>
 				          		<input id="name" name="name" type="text" class="validate">
 				          		<label for="name" data-error="wrong" data-success="right">Name</label>
-				        	</div>
-				        	<div class="input-field col s6">
-				          		<i class="material-icons prefix">phone</i>
-				          		<input id="contact_no" name="contact_no" type="number" class="validate">
-				          		<label for="contact_no" data-error="wrong" data-success="right">Telephone</label>
+				        	</div>				        	
+				      	</div>
+				      	<div class="row">
+				      		<div class="input-field col s12">
+				          		<i class="material-icons prefix">subject</i>
+				          		<input id="subject" name="subject" type="text" class="validate">
+				          		<label for="subject" data-error="wrong" data-success="right">Subject</label>
 				        	</div>
 				      	</div>
 				      	<div class="row">
@@ -648,7 +656,7 @@
       					</div>
       					<div class="row">
       						<div class="col offset-s1">
-      							<input type="submit" class="waves-effect waves-light btn">
+      							<input type="button" id="submit" value="Send" class="waves-effect waves-light btn">
       						</div>
   						</div>
 				    </form>
@@ -703,9 +711,11 @@
 					<div class="col s3 m3 l3">
 						<div class="white-text">
 							<h5>Connect socially via</h5>
-							<div class="valign-wrapper">
-								<img class="valign responsive-img" src="images/facebook.png">
-							</div>
+							<a href="https://www.facebook.com" target="_blank">
+								<div class="valign-wrapper">
+									<img class="valign responsive-img" src="images/facebook.png">
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -728,6 +738,8 @@
   		<script type="text/javascript">
     		$(document).ready(function(){
 
+    			$('#submit').off('click');
+
     			// function for full screen carousel
      			$('.carousel.carousel-slider').carousel({full_width: true});
      			$('.slider').slider();
@@ -744,6 +756,9 @@
 		  			$(this).css('background-size', '100% 100%');
 		  		});
 		  		$('.overlay').css('height', 'slidesHeight');
+
+    			// collapsible nav-bar
+    			$(".button-collapse").sideNav();
 
      			// function for triggering modal
      			$('.modal').modal();     			
@@ -831,6 +846,39 @@
 			  	$('.close-video-flex-printing').on('click', function(){
 			  		var temp_src = $('#player_video_flex_printing').attr('src');
 			  		$('#player_video_flex_printing').attr('src', temp_src);
+			  	});
+
+			  	$('#submit').on('click', function(){
+			  		console.log('submit button clicked');
+			  		var name = $('#name').val();
+			  		var subject = $('#subject').val();
+			  		var email = $('#email').val();
+			  		var query = $('#query').val();
+
+			  		$.ajax({
+			  			type: "POST",
+			  			url: "sendMail.php",
+			  			data: {name: name, subject: subject, email: email, query: query},
+			  			cache: false,
+			  			success: function(response)
+			  			{
+			  				if(response==200)
+			  				{
+			  					Materialize.toast('Mail sent successfully', 4000, 'green');
+			  					$('#mail').modal('close');
+			  				}
+			  				else if(response==403)
+			  				{
+			  					Materialize.toast("Mail couldn't be sent, Please try again later", 4000, 'red center-align');
+			  				}
+			  			}
+			  			// error: function(response)
+			  			// {
+			  			// 	console.log("Couldn't send the mail");
+		  				// 	console.log(response);
+			  			// }
+			  		});
+
 			  	});
 
     		});

@@ -4,7 +4,7 @@
 	class fillInfo
 	{
 		private $name;
-		private $contact_no;
+		private $subject;
 		private $email;
 		private $query;
 
@@ -23,19 +23,19 @@
 			return $this->name;
 		}
 
-		function setContactNo($contact_no)
+		function setSubject($subject)
 		{
-			if(empty($contact_no))
+			if(empty($subject))
 			{
-				throw new Exception('Contact Number can not be empty');
+				throw new Exception('Subject can not be empty');
 			}
 
-			$this->contact_no = $contact_no;
+			$this->subject = $subject;
 		}
 
-		function getContactNo()
+		function getSubject()
 		{
-			return $this->contact_no;
+			return $this->subject;
 		}
 
 		function setEmail($email)
@@ -77,7 +77,7 @@
 		$fillInformation->setName($_POST["name"]);
 		try
 		{
-			$fillInformation->setContactNo($_POST["contact_no"]);
+			$fillInformation->setSubject($_POST["subject"]);
 			try
 			{
 				$fillInformation->setEmail($_POST["email"]);
@@ -98,7 +98,7 @@
 
 					$mail->setFrom($fillInformation->getEmail(), $fillInformation->getName());
 					$mail->addAddress($fillInformation->getEmail(), $fillInformation->getName());
-					$mail->subject = $fillInformation->getContactNo();
+					$mail->subject = $fillInformation->getSubject();
 					$mail->msgHTML($fillInformation->getQuery());
 					if (!$mail->send())
 					{
@@ -106,40 +106,34 @@
 					}
 					else
 					{
-						echo $fillInformation->getName()." ";
-						echo $fillInformation->getEmail()." ";
-						echo $fillInformation->getContactNo()." ";
-						echo $fillInformation->getQuery();
-
-					    echo "Message sent!";
+						echo 200;
 					}
 				}
 				catch(Exception $e)
 				{
-					echo "Error Message: ".$e->getMessage().'<br>';
+					echo 403;	// forbidden
+					// $json->message = "Error Message: ".$e->getMessage();
 				}
 
 			}
 			catch(Exception $e)
 			{
-				echo "Error Message: ".$e->getMessage().'<br>';
+				echo 403;	// forbidden
+				// $json->message = "Error Message: ".$e->getMessage();
 			}
 
 		}
 		catch(Exception $e)
 		{
-			echo "Error Message: ".$e->getMessage().'<br>';
+			echo 403;	// forbidden
+			// $json->message = "Error Message: ".$e->getMessage();
 		}
 
 	}
 	catch(Exception $e)
 	{
-		echo "Error Message: ".$e->getMessage().'<br>';
+		echo 403;	// forbidden
+		// $json->message = "Error Message: ".$e->getMessage();
 	}
 
-
-	
-
-	
-	
 ?>
