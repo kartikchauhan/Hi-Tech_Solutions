@@ -51,13 +51,26 @@
 			    width:100%;
 			    position:absolute;
 			}
-			.overlay
+			.overlay-slider
 			{
-				display: block;
-				z-index: 20;
-				background: rgba(0, 0, 0, 0.8);
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #080d15;
+				opacity: 0.5;
 			}
-
+			.overlay-slider-clients
+			{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: SlateGray;
+				opacity: 0.8;
+			}
+			.slider .slides li .caption
+			{
+				top:75% !important;
+			}
         </style>
     </head>
     <body>
@@ -88,48 +101,47 @@
 	  	<!-- Full Screen Carousel -->
 
 	  	<div class="slider z-depth-2">
-    		<ul class="slides">    			
+    		<ul class="slides">    							
       			<li>
+      				<div class="overlay-slider"></div>
         			<img src="images/ACCESS_CARD.jpg">
-        			<div class="overlay"></div>
         			<div class="caption center-align">
-          				<h3>This is our big Tagline!</h3>
-          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          				<h4 class="light white-text" >ACCESS CARD</h4>
         			</div>
 			    </li>
       			<li>
+      				<div class="overlay-slider"></div>
         			<img src="images/CCTV1.jpg">
-        			<div class="caption left-align">
-          				<h3>Left Aligned Caption</h3>
-          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			<div class="caption center-align">
+          				<h4 class="light white-text">CCTV CAMERA</h4>
         			</div>
       			</li>
       			<li>
+      				<div class="overlay-slider"></div>
     				<img class="change-background-size"src="images/INTERCOMM.jpg">
-        			<div class="caption right-align">
-          				<h3>Right Aligned Caption</h3>
-      					<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        			<div class="caption center-align">
+      					<h4 class="light white-text">INTERCOMM SYSTEM</h4>
         			</div>
       			</li>
       			<li>
+      				<div class="overlay-slider"></div>
         			<img class="change-background-size"src="images/CCTV2.jpg">
         			<div class="caption center-align">
-          				<h3>This is our big Tagline!</h3>
-          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          				<h4 class="light white-text">NIGHTVISION CCTV CAMERA</h4>
         			</div>
       			</li>
       			<li>
+      				<div class="overlay-slider"></div>
         			<img class="change-background-size" src="images/EM_LOCKS.jpg">
         			<div class="caption center-align">
-          				<h3>This is our big Tagline!</h3>
-          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          				<h4 class="light white-text">ELECTROMAGNETIC LOCK</h4>
         			</div>
       			</li>
       			<li>
+      				<div class="overlay-slider"></div>
         			<img class="change-background-size" src="images/VIDEO_DOOR_PHONE.jpg">
     				<div class="caption center-align">
-          				<h3>This is our big Tagline!</h3>
-          				<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          				<h4 class="light white-text">VIDEO DOOR PHONE</h4>
         			</div>
       			</li>
     		</ul>
@@ -317,7 +329,17 @@
 	  	<div id="modal_description_cctv_camera" class="modal">
 	    	<div class="modal-content">
 	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+	      		<div class="divider"></div>
+	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.</p>
+	      		<h5 class="teal-text">Types Of CCTV Cameras</h5>
+	      		<p>CCTV Cameras can be categorized by the types of images they are able to capture, the amount of frames they can take per minute, the type of connection to the monitor or video recording device, whether they are able to move position, and special functions they can provide.</p>
+	      		<h5 class="teal-text">Uses</h5>
+	      		<p>CCTV is commonly used for a variety of purposes, including:</p>
+	      		<ul style="list-style-type: disc !important">
+	      			<li>Maintaining perimeter security</li>
+	      			<li>Monitoring traffic.</li>
+	      			<li>Obtaining a visual record of human activity.</li>
+	      		</ul>
 	    	</div>
 	    	<div class="modal-footer">
 	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
@@ -339,8 +361,11 @@
 	  	<!-- Code for modal of Video Door Phone -->
 	  	<div id="modal_description_video_door_phone" class="modal">
 	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+	      		<h4 class="teal-text">Video Door Phone</h4>
+	      		<div class="divider"></div>
+	      		<p>A Video Door Phone is a stand-alone intercom system used to manage calls made at the entrance to a building with access controlled by audiovisual communication between the inside and outside.</p>
+	      		<h5 class="teal-text">Uses</h5>
+	      		<p>The main feature of video door entry is that it enables the person indoors to identify the visitor and, if (and only if) they wish, engage in conversation and/or open the door to allow access to the person calling.</p>
 	    	</div>
 	    	<div class="modal-footer">
 	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
@@ -350,7 +375,7 @@
 	  	<div id="modal_video_video_door_phone" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe id="player_video_door_phone" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe id="player_video_video_door_phone" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -362,8 +387,9 @@
 	  	<!-- Code for modal of Biometric Machine -->
 	  	<div id="modal_description_biometric_machine" class="modal">
 	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+	      		<h4 class="teal-text">Biometric System</h4>
+	      		<div class="divider"></div>
+	      		<p>When referring to computers and security, biometrics is the identification of a person by the measurement of their biological features. For example, a user identifying themselves to a computer or building by their finger print or voice is considered a biometrics identification. When compared to a password, this type of system is much more difficult to fake since it is unique to the person.</p>
 	    	</div>
 	    	<div class="modal-footer">
 	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
@@ -373,7 +399,7 @@
 	  	<div id="modal_video_biometric_machine" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe id="player_video_biometric_machine" width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -385,15 +411,16 @@
 	  	<!-- Code for modal of Intercomm System -->
 	  	<div id="modal_description_intercomm_system" class="modal">
 	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+	      		<h4 class="teal-text">Intercom System</h4>
+	      		<div class="divider"></div>
+	      		<p>An intercom (intercommunication device), talkback or doorphone is a stand-alone voice communications system for use within a building or small collection of buildings, functioning independently of the public telephone network (Azori 2016). Intercoms are generally mounted permanently in buildings and vehicles. Intercoms can incorporate connections to public address loudspeaker systems, walkie talkies, telephones, and to other intercom systems. Some intercom systems incorporate control of devices such as signal lights and door latches.</p>
 	    	</div>
 	    	<div class="modal-footer">
 	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
 	    	</div>
 	  	</div>
 
-	  	<div id="modal_video_video_intercomm_system" class="modal">
+	  	<div id="modal_video_intercomm_system" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
  				 	<iframe id="player_video_intercomm_system" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
@@ -419,7 +446,7 @@
 	  	<div id="modal_video_RFID" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/gEQJxNDSKAE" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe id="player_video_RFID" width="560" height="315" src="https://www.youtube.com/embed/gEQJxNDSKAE" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -431,8 +458,8 @@
 	  	<!-- Code for modal of Access Card -->
 	  	<div id="modal_description_access_card" class="modal">
 	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+	      		<h4 class="teal-text">Access Card</h4>
+	      		<p>A plastic card with a chip or magnetic strip containing encoded data that is read by passing the card through or over an electronic device, used to provide access to restricted or secure areas or systems.</p>
 	    	</div>
 	    	<div class="modal-footer">
 	    		<a class="waves-effect waves-light btn modal-close right close-video-access-card">Close</a>
@@ -442,7 +469,7 @@
 	  	<div id="modal_video_access_card" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframeid="player_video_access_card" width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -465,7 +492,7 @@
 	  	<div id="modal_video_em_lock" class="modal">
 	    	<div class="modal-content">
  				 <div class="video-container">
- 				 	<iframe width="560" height="315" src="https://www.youtube.com/embed/SzaUG8qokLo" frameborder="0" allowfullscreen></iframe>
+ 				 	<iframe id="player_video_em_lock" width="560" height="315" src="https://www.youtube.com/embed/SzaUG8qokLo" frameborder="0" allowfullscreen></iframe>
  				 </div>
 	    	</div>
 	    	<div class="modal-footer">
@@ -545,34 +572,38 @@
 
 		<div class="container section"  id="clients">
 			<div class="section">
-				<div class="slider">
+				<div class="slider slider-custom">
     				<ul class="slides z-depth-2">
      					<li>
+     						<div class="overlay-slider-clients">
         					<img src="images/indian_oil.jpg">
         					<div class="caption center-align">
-					        	<h3>This is our big Tagline!</h3>
-			        	  		<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+					        	<h5 class="light white-text">Indian Oil Pump</h5>
+					        	<h6 class="light white-text">Seohara, Dhampur</h6>
 					        </div>
 					      </li>
       					<li>
+      						<div class="overlay-slider-clients">
         					<img src="images/tvs_dealers.jpg">
-        					<div class="caption left-align">
-          						<h3>Left Aligned Caption</h3>
-          						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        					<div class="caption center-align">
+          						<h5 class="light white-text">TVS Showroom</h5>
+					        	<h6 class="light white-text">Seohara</h6>
         					</div>
       					</li>
       					<li>
+      						<div class="overlay-slider-clients">
         					<img src="images/honda_dealers.jpg">
-        					<div class="caption left-align">
-          						<h3>Left Aligned Caption</h3>
-          						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        					<div class="caption center-align">
+          						<h5 class="light white-text">Honda Showroom</h5>
+					        	<h6 class="light white-text">Seohara</h6>
         					</div>
       					</li>
       					<li>
+      						<div class="overlay-slider-clients">
         					<img src="images/reliance.jpg">
-        					<div class="caption left-align">
-          						<h3>Left Aligned Caption</h3>
-          						<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        					<div class="caption center-align">
+          						<h5 class="light white-text">Reliance Petrol Pump</h5>
+					        	<h6 class="light white-text">Seohara</h6>
         					</div>
       					</li>
    					</ul>
@@ -741,8 +772,8 @@
     			$('#submit').off('click');
 
     			// function for full screen carousel
-     			$('.carousel.carousel-slider').carousel({full_width: true});
-     			$('.slider').slider();
+     			// $('.carousel.carousel-slider').carousel({full_width: true});
+     			$('.slider').slider({});
 
      			$('.carousel').carousel();
 
@@ -755,8 +786,7 @@
 		  		$('.change-background-size').each(function(){		// changing background-size of all images whose size is greater than required length
 		  			$(this).css('background-size', '100% 100%');
 		  		});
-		  		$('.overlay').css('height', 'slidesHeight');
-
+				
     			// collapsible nav-bar
     			$(".button-collapse").sideNav();
 
@@ -786,7 +816,6 @@
 				    }
 			  	});
 
-
 			  	// Code for scroll to top button
 			  	$(window).scroll(function(){
 			  		if($(window).scrollTop()>300)
@@ -815,7 +844,7 @@
 
 			  	$('.close-video-video-door-phone').on('click', function(){
 			  		var temp_src = $('#player_video_door_phone').attr('src');
-			  		$('#player_video_door_phone').attr('src', temp_src);
+			  		$('#player_video_video_door_phone').attr('src', temp_src);
 			  	});
 
 			  	$('.close-video-biometric-machine').on('click', function(){
