@@ -1,6 +1,11 @@
 <!Doctype html>
 <html>
     <head>
+    	<!-- <link rel="preload" as="style" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    	<link rel="preload" as="script" href="https://code.jquery.com/jquery-2.2.4.min.js">
+    	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"> -->
+
         <title>
             Hi-Tech Solutions
         </title>
@@ -12,12 +17,20 @@
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 
         <style>
+        	nav
+        	{
+        		box-shadow: 0px 0px;
+        	}
+        	#secondary-content
+        	{
+        		position: relative;
+        		top: 95vh;
+        	}
         	.scroll-to-top
         	{
         		position:fixed;
         		bottom: 40px;
         		right:40px;
-
         	}
         	.brand
         	{
@@ -27,6 +40,10 @@
         	{
         		position: relative;
         		top:10px;
+        	}
+        	.slider
+        	{
+        		z-index: -1;
         	}
         	.slider .indicators .indicator-item.active
         	{
@@ -41,7 +58,7 @@
 			    overflow:hidden;
 			    position:relative;
 			    height:400px;
-			    margin-bottom: 0;
+			    margin-bottom: 20px;
 			}
 			.map-responsive iframe
 			{
@@ -76,9 +93,9 @@
     <body>
 
     	<!-- Navigation Bar -->
-	    <nav class="z-depth-2 blue">
+	    <nav class="transparent">
 		    <div class="nav-wrapper container">
-	      		<a href="#" class="brand-logo"><img src="images/logo1.png" class="responsive-img"></a>
+	      		<a href="javascript:void(0)" class="brand-logo"><img src="images/logo1.png" class="responsive-img"></a>
 		      	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 		      	<ul class="right hide-on-med-and-down">
 		        	<li><a href="#" class="nav-headers">HOME</a></li>
@@ -88,19 +105,28 @@
 		        	<li><a href="#contact_us" class="nav-headers">CONTACT US</a></li>
 		      	</ul>
 		      	<ul class="side-nav" id="mobile-demo">
-		      		<li><a href="#" class="nav-headers">HOME</a></li>
-	        		<li><a href="#services" class="nav-headers">SERVICES</a></li>
-		        	<li><a href="#brands" class="nav-headers">BRANDS</a></li>
-		        	<li><a href="#clients" class="nav-headers">CLIENTS</a></li>
-		        	<li><a href="#contact_us" class="nav-headers">CONTACT US</a></li>
+		      		<li>
+		      			<a href="#" class="nav-headers">HOME <i class="material-icons right">home</i></a>
+		      		</li>
+	        		<li>
+	        			<a href="#services" class="nav-headers">SERVICES <i class="material-icons right">settings</i></a>
+        			</li>
+		        	<li>
+		        		<a href="#brands" class="nav-headers">BRANDS <i class="material-icons right">sort_by_alpha</i></a>
+	        		</li>
+		        	<li>
+		        		<a href="#clients" class="nav-headers">CLIENTS <i class="material-icons right">people</i></a>
+	        		</li>
+		        	<li>
+		        		<a href="#contact_us" class="nav-headers">CONTACT US <i class="material-icons right">contact_mail</i></a>
+	        		</li>
 	        	</ul>
 		    </div>
 	  	</nav>
-	  	<!-- /Navigation Bar -->
 
 	  	<!-- Full Screen Carousel -->
 
-	  	<div class="slider z-depth-2">
+	  	<div class="slider z-depth-2 fullscreen">
     		<ul class="slides">    							
       			<li>
       				<div class="overlay-slider"></div>
@@ -146,10 +172,8 @@
       			</li>
     		</ul>
   		</div>
-	  	<!-- /Full Screen Carousel -->
 
-	  	<!-- Services -->
-
+  		<div id="secondary-content">
 	  		<!-- Code for services navigation container -->
 			<div class="row">
 	  			<div class="card-panel blue z-depth-2">
@@ -159,19 +183,17 @@
   					</div>
 	  			</div>
   			</div>
-  			<!-- /Code for services navigation container -->
 
   			<div class="row" id="services">
 
   				<!-- Code for CCTV Camera -->
-  				<div class="col s3 m3 l3">
+  				<div class="col s12 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">camera_alt</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">CCTV Camera</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -180,17 +202,15 @@
 						</div>
   					</div>
 				</div>
-				<!-- /Code for CCTV Camera -->
 
 				<!-- Code for Video Door Phone -->
-				<div class="col s3 m3 l3 ">
+				<div class="col s12 l3 ">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">videocam</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">Video Door Phone</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -199,17 +219,15 @@
 						</div>
   					</div>
 				</div>
-				<!-- Code for Video Door Phone -->
 
 				<!-- Code for Biometric Machine-->
-				<div class="col s3 m3 l3 ">
+				<div class="col s12 l3 ">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">fingerprint</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">Biometric Machine</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -218,17 +236,15 @@
 						</div>
   					</div>
 				</div>
-				<!-- Code for Biometric Machine-->
 
 				<!-- Code for Intercomm System -->
-				<div class="col s3 m3 l3 ">
+				<div class="col s12 l3 ">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">call</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">Intercomm System</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -237,14 +253,13 @@
 						</div>
   					</div>
 				</div>
-				<!-- Code for Intercomm System -->
 
 			</div>
 
 			<div class="row">
 
 				<!-- Code for RFID -->
-				<div class="col s3 m3 l3">
+				<div class="col s12 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">widgets</i>
@@ -260,17 +275,15 @@
 						</div>
   					</div>
 				</div>
-				<!-- Code for RFID -->
 
 				<!-- Code for Access Card -->
-				<div class="col s3 m3 l3">
+				<div class="col s12 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">credit_card</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">Access Card</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -279,17 +292,15 @@
 						</div>
   					</div>
 				</div>
-				<!-- /Code for Access Card -->
 
 				<!-- Code for EM Lock -->
-				<div class="col s3 m3 l3">
+				<div class="col s12 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">lock</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">ElectroMagnetic Locks</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -298,17 +309,15 @@
 						</div>
   					</div>
 				</div>
-				<!-- /Code for EM Lock -->
 
 				<!-- Code for Flex Printing -->
-				<div class="col s3 m3 l3">
+				<div class="col s12 l3">
   					<div class="card small z-depth-2 hoverable">
   						<div class="card-image blue-text center-align">
   							<i class="large material-icons">receipt</i>
   						</div>
   						<div class="card-content center-align blue-text">
   							<div class="card-title">Flex Printing</div>
-  							<div class="divider"></div>
   							<p>CCTV is a TV system in which signals are not publicly distributed but are...</p>
 						</div>
 						<div class="card-action">
@@ -317,448 +326,445 @@
 						</div>
   					</div>
 				</div>
-				<!-- /Code for Flex Printing -->
 
   			</div>
 
-	  	<!-- /Services -->
+		  	<!-- Services Modals -->
 
-	  	<!-- Services Modals -->
+		  	<!-- Code for modal of CCTV Camera -->
+		  	<div id="modal_description_cctv_camera" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">CCTV Camera</h4>
+		      		<div class="divider"></div>
+		      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.</p>
+		      		<h5 class="teal-text">Types Of CCTV Cameras</h5>
+		      		<p>CCTV Cameras can be categorized by the types of images they are able to capture, the amount of frames they can take per minute, the type of connection to the monitor or video recording device, whether they are able to move position, and special functions they can provide.</p>
+		      		<h5 class="teal-text">Uses</h5>
+		      		<p>CCTV is commonly used for a variety of purposes, including:</p>
+		      		<ul style="list-style-type: disc !important">
+		      			<li>Maintaining perimeter security</li>
+		      			<li>Monitoring traffic.</li>
+		      			<li>Obtaining a visual record of human activity.</li>
+		      		</ul>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of CCTV Camera -->
-	  	<div id="modal_description_cctv_camera" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<div class="divider"></div>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.</p>
-	      		<h5 class="teal-text">Types Of CCTV Cameras</h5>
-	      		<p>CCTV Cameras can be categorized by the types of images they are able to capture, the amount of frames they can take per minute, the type of connection to the monitor or video recording device, whether they are able to move position, and special functions they can provide.</p>
-	      		<h5 class="teal-text">Uses</h5>
-	      		<p>CCTV is commonly used for a variety of purposes, including:</p>
-	      		<ul style="list-style-type: disc !important">
-	      			<li>Maintaining perimeter security</li>
-	      			<li>Monitoring traffic.</li>
-	      			<li>Obtaining a visual record of human activity.</li>
-	      		</ul>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_cctv_camera" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframe id="player_video_cctv_camera" width="854" height="480" src="https://www.youtube.com/embed/pYr5ZDBoWlo" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-cctv-camera">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_cctv_camera" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_cctv_camera" width="854" height="480" src="https://www.youtube.com/embed/pYr5ZDBoWlo" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-cctv-camera">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of CCTV Camera -->
+		  	<!-- Code for modal of Video Door Phone -->
+		  	<div id="modal_description_video_door_phone" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">Video Door Phone</h4>
+		      		<div class="divider"></div>
+		      		<p>A Video Door Phone is a stand-alone intercom system used to manage calls made at the entrance to a building with access controlled by audiovisual communication between the inside and outside.</p>
+		      		<h5 class="teal-text">Uses</h5>
+		      		<p>The main feature of video door entry is that it enables the person indoors to identify the visitor and, if (and only if) they wish, engage in conversation and/or open the door to allow access to the person calling.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of Video Door Phone -->
-	  	<div id="modal_description_video_door_phone" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">Video Door Phone</h4>
-	      		<div class="divider"></div>
-	      		<p>A Video Door Phone is a stand-alone intercom system used to manage calls made at the entrance to a building with access controlled by audiovisual communication between the inside and outside.</p>
-	      		<h5 class="teal-text">Uses</h5>
-	      		<p>The main feature of video door entry is that it enables the person indoors to identify the visitor and, if (and only if) they wish, engage in conversation and/or open the door to allow access to the person calling.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_video_door_phone" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframe id="player_video_video_door_phone" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-video-door-phone">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_video_door_phone" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_video_door_phone" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-video-door-phone">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of Video Door Phone -->
+		  	<!-- Code for modal of Biometric Machine -->
+		  	<div id="modal_description_biometric_machine" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">Biometric System</h4>
+		      		<div class="divider"></div>
+		      		<p>When referring to computers and security, biometrics is the identification of a person by the measurement of their biological features. For example, a user identifying themselves to a computer or building by their finger print or voice is considered a biometrics identification. When compared to a password, this type of system is much more difficult to fake since it is unique to the person.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of Biometric Machine -->
-	  	<div id="modal_description_biometric_machine" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">Biometric System</h4>
-	      		<div class="divider"></div>
-	      		<p>When referring to computers and security, biometrics is the identification of a person by the measurement of their biological features. For example, a user identifying themselves to a computer or building by their finger print or voice is considered a biometrics identification. When compared to a password, this type of system is much more difficult to fake since it is unique to the person.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_biometric_machine" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframe id="player_video_biometric_machine" width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-biometric-machine">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_biometric_machine" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_biometric_machine" width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-biometric-machine">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of Biometric Machine -->
+		  	<!-- Code for modal of Intercomm System -->
+		  	<div id="modal_description_intercomm_system" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">Intercom System</h4>
+		      		<div class="divider"></div>
+		      		<p>An intercom (intercommunication device), talkback or doorphone is a stand-alone voice communications system for use within a building or small collection of buildings, functioning independently of the public telephone network (Azori 2016). Intercoms are generally mounted permanently in buildings and vehicles. Intercoms can incorporate connections to public address loudspeaker systems, walkie talkies, telephones, and to other intercom systems. Some intercom systems incorporate control of devices such as signal lights and door latches.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of Intercomm System -->
-	  	<div id="modal_description_intercomm_system" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">Intercom System</h4>
-	      		<div class="divider"></div>
-	      		<p>An intercom (intercommunication device), talkback or doorphone is a stand-alone voice communications system for use within a building or small collection of buildings, functioning independently of the public telephone network (Azori 2016). Intercoms are generally mounted permanently in buildings and vehicles. Intercoms can incorporate connections to public address loudspeaker systems, walkie talkies, telephones, and to other intercom systems. Some intercom systems incorporate control of devices such as signal lights and door latches.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_intercomm_system" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframe id="player_video_intercomm_system" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-intercomm-system">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_intercomm_system" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_intercomm_system" width="560" height="315" src="https://www.youtube.com/embed/0NUgViBiJuI?start=20" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-intercomm-system">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of Intercomm System -->
+		  	<!-- Code for modal of RFID -->
+		  	<div id="modal_description_RFID" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">CCTV Camera</h4>
+		      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of RFID -->
-	  	<div id="modal_description_RFID" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_RFID" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframe id="player_video_RFID" width="560" height="315" src="https://www.youtube.com/embed/gEQJxNDSKAE" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-RFID">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_RFID" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_RFID" width="560" height="315" src="https://www.youtube.com/embed/gEQJxNDSKAE" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-RFID">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of RFID -->
+		  	<!-- Code for modal of Access Card -->
+		  	<div id="modal_description_access_card" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">Access Card</h4>
+		      		<p>A plastic card with a chip or magnetic strip containing encoded data that is read by passing the card through or over an electronic device, used to provide access to restricted or secure areas or systems.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-access-card">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of Access Card -->
-	  	<div id="modal_description_access_card" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">Access Card</h4>
-	      		<p>A plastic card with a chip or magnetic strip containing encoded data that is read by passing the card through or over an electronic device, used to provide access to restricted or secure areas or systems.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-access-card">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_access_card" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframeid="player_video_access_card" width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-access-card">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_access_card" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframeid="player_video_access_card" width="560" height="315" src="https://www.youtube.com/embed/Wvl-ZRQ0bLg" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-access-card">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of Access Card -->
+		  	<!-- Code for modal of EM Lock -->
+		  	<div id="modal_description_em_lock" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">CCTV Camera</h4>
+		      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of EM Lock -->
-	  	<div id="modal_description_em_lock" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">CCTV Camera</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_em_lock" class="modal">
+		    	<div class="modal-content">
+	 				 <div class="video-container">
+	 				 	<iframe id="player_video_em_lock" width="560" height="315" src="https://www.youtube.com/embed/SzaUG8qokLo" frameborder="0" allowfullscreen></iframe>
+	 				 </div>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right close-video-em-lock">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_em_lock" class="modal">
-	    	<div class="modal-content">
- 				 <div class="video-container">
- 				 	<iframe id="player_video_em_lock" width="560" height="315" src="https://www.youtube.com/embed/SzaUG8qokLo" frameborder="0" allowfullscreen></iframe>
- 				 </div>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right close-video-em-lock">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of EM Locks -->
+		  	<!-- Code for modal of Flex Printing -->
+		  	<div id="modal_description_flex_printing" class="modal">
+		    	<div class="modal-content">
+		      		<h4 class="teal-text">Flex Printing</h4>
+		      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<!-- Code for modal of Flex Printing -->
-	  	<div id="modal_description_flex_printing" class="modal">
-	    	<div class="modal-content">
-	      		<h4 class="teal-text">Flex Printing</h4>
-	      		<p>CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes.<br><br>CCTV relies on strategic placement of cameras, and observation of the camera's input on monitors somewhere. Because the cameras communicate with monitors and/or video recorders across private coaxial cable runs or wireless communication links, they gain the designation "closed-circuit" to indicate that access to their content is limited by design only to those able to see it.</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right">Close</a>
-	    	</div>
-	  	</div>
+		  	<div id="modal_video_flex_printing" class="modal">
+		    	<div class="modal-content">
+	 				 <p>Sorry, no video available right now</p>
+		    	</div>
+		    	<div class="modal-footer">
+		    		<a class="waves-effect waves-light btn modal-close right tooltipped close-video-flex-printing">Close</a>
+		    	</div>
+		  	</div>
 
-	  	<div id="modal_video_flex_printing" class="modal">
-	    	<div class="modal-content">
- 				 <p>Sorry, no video available right now</p>
-	    	</div>
-	    	<div class="modal-footer">
-	    		<a class="waves-effect waves-light btn modal-close right tooltipped close-video-flex-printing">Close</a>
-	    	</div>
-	  	</div>
-	  	<!-- /Code for modal of Flex Printing -->
+		  	<!-- Code for Brands -->
 
-	  	<!-- /Services Modals -->
+		  	<!-- Code for Brands Navigation Container -->
 
-	  	<!-- Code for Brands -->
+		  	<div class="row" id="brands">
+		  		<div class="card-panel blue z-depth-2">
+		  			<div class="card-content white-text center-align">
+		  				<h5 class="card-title">BRANDS WE DEAL IN</h5>
+		  				<i class="material-icons">sort_by_alpha</i>
+	  				</div>
+		  		</div>
+		  	</div>
+		  	
+			<!-- carousel for brands -->
 
-	  	<!-- Code for Brands Navigation Container -->
+			<div class="carousel">
+			    <a class="carousel-item" href="#one!"><img class="brand" src="images/brand1.jpg"></a>
+			    <a class="carousel-item" href="#two!"><img class="brand" src="images/brand2.jpg"></a>
+			    <a class="carousel-item" href="#three!"><img class="brand" src="images/brand3.jpg"></a>
+			    <a class="carousel-item" href="#four!"><img class="brand" src="images/brand4.jpg"></a>
+			    <a class="carousel-item" href="#five!"><img class="brand" src="images/brand5.jpg"></a>
+		  	</div>
 
-	  	<div class="row" id="brands">
-	  		<div class="card-panel blue z-depth-2">
-	  			<div class="card-content white-text center-align">
-	  				<h5 class="card-title">BRANDS WE DEAL IN</h5>
-	  				<i class="material-icons">sort_by_alpha</i>
-  				</div>
-	  		</div>
-	  	</div>
-	  	
-		<!-- /Code for Brands Navigation Container -->
+			<!-- Code for Clients -->
 
-		<!-- carousel for brands -->
+			<!-- Code for Clients Navigation Section -->
 
-		<div class="carousel">
-		    <a class="carousel-item" href="#one!"><img class="brand" src="images/brand1.jpg"></a>
-		    <a class="carousel-item" href="#two!"><img class="brand" src="images/brand2.jpg"></a>
-		    <a class="carousel-item" href="#three!"><img class="brand" src="images/brand3.jpg"></a>
-		    <a class="carousel-item" href="#four!"><img class="brand" src="images/brand4.jpg"></a>
-		    <a class="carousel-item" href="#five!"><img class="brand" src="images/brand5.jpg"></a>
-	  	</div>
-
-	  	<!-- /carousel for brands -->
-
-		<!-- /Code for Brands -->
-
-		<!-- Code for Clients -->
-
-		<!-- Code for Clients Navigation Section -->
-
-		<div class="row">
-			<div class="card-panel blue z-depth-2">
-				<div class="card-content white-text center-align">
-					<h5 class="card-title">CLIENTS</h5>
-					<i class="material-icons">people</i>
-				</div>
-			</div>
-		</div>
-
-		<!-- /Code for Clients Navigation Section -->
-
-		<!-- Carousel for Clients -->
-
-		<div class="container section" id="clients">
-			<div class="section">
-				<div class="slider slider-custom">
-    				<ul class="slides z-depth-2">
-     					<li>
-     						<div class="overlay-slider-clients">
-        					<img src="images/indian_oil.jpg">
-        					<div class="caption center-align">
-					        	<h5 class="light white-text">Indian Oil Pump</h5>
-					        	<h6 class="light white-text">Seohara, Dhampur</h6>
-					        </div>
-					      </li>
-      					<li>
-      						<div class="overlay-slider-clients">
-        					<img src="images/tvs_dealers.jpg">
-        					<div class="caption center-align">
-          						<h5 class="light white-text">TVS Showroom</h5>
-					        	<h6 class="light white-text">Seohara</h6>
-        					</div>
-      					</li>
-      					<li>
-      						<div class="overlay-slider-clients">
-        					<img src="images/honda_dealers.jpg">
-        					<div class="caption center-align">
-          						<h5 class="light white-text">Honda Showroom</h5>
-					        	<h6 class="light white-text">Seohara</h6>
-        					</div>
-      					</li>
-      					<li>
-      						<div class="overlay-slider-clients">
-        					<img src="images/reliance.jpg">
-        					<div class="caption center-align">
-          						<h5 class="light white-text">Reliance Petrol Pump</h5>
-					        	<h6 class="light white-text">Seohara</h6>
-        					</div>
-      					</li>
-   					</ul>
-  				</div>
-  			</div>
-  		</div>
-
-  		<!-- Carousel for Clients -->
-
-		<!-- /Code for Clients -->
-
-		<!-- Code for Contact Us -->
-
-		<!-- Code for Contact_us navigation section -->
-
-		<div class="row" id="contact_us">
-			<div class="card-panel blue z-depth-2">
-				<div class="card-content white-text center-align">
-					<h5 class="card-title">CONTACT US</h5>
-					<i class="material-icons">contact_mail</i>
-				</div>
-			</div>
-		</div>
-
-		<!-- /Code for Contact_us navigation section -->
-
-		<!-- Code for Contact_us text -->
-		<div class="container">
-			<div class="row valign-wrapper">
-				<div class="col s8">
-					<div class="row valign">
-						<h5 class="blue-text">Get in touch with us</h5>
-						<div class="divider blue"></div>
-						<p class="left-align">
-						 We are specialized in the sale of surveillance and security electronic equipment.<br><br>
-						We offer a professional commercial supply and installation service in Bijnor.<br>
-						This includes CCTV equipment, access control products, electronic safe, at the best possible price with the best possible support.<br><br>
-						We are leaders in giving satisfaction and service in the provisions of quality cost effective security systems, contact us for more details.</p>
+			<div class="row">
+				<div class="card-panel blue z-depth-2">
+					<div class="card-content white-text center-align">
+						<h5 class="card-title">CLIENTS</h5>
+						<i class="material-icons">people</i>
 					</div>
 				</div>
+			</div>
 
-				<div class="col s4">
-					<div class="envelope valign" >
-						<a href="#mail"><img class="responsive-img z-depth-2 hoverable" src="images/mail2.png"></a>
+			<!-- Carousel for Clients -->
+
+			<div class="container section" id="clients">
+				<div class="section">
+					<div class="slider slider-custom">
+	    				<ul class="slides z-depth-2">
+	     					<li>
+	     						<div class="overlay-slider-clients">
+	        					<img src="images/indian_oil.jpg">
+	        					<div class="caption center-align">
+						        	<h5 class="light white-text">Indian Oil Pump</h5>
+						        	<h6 class="light white-text">Seohara, Dhampur</h6>
+						        </div>
+						      </li>
+	      					<li>
+	      						<div class="overlay-slider-clients">
+	        					<img src="images/tvs_dealers.jpg">
+	        					<div class="caption center-align">
+	          						<h5 class="light white-text">TVS Showroom</h5>
+						        	<h6 class="light white-text">Seohara</h6>
+	        					</div>
+	      					</li>
+	      					<li>
+	      						<div class="overlay-slider-clients">
+	        					<img src="images/honda_dealers.jpg">
+	        					<div class="caption center-align">
+	          						<h5 class="light white-text">Honda Showroom</h5>
+						        	<h6 class="light white-text">Seohara</h6>
+	        					</div>
+	      					</li>
+	      					<li>
+	      						<div class="overlay-slider-clients">
+	        					<img src="images/reliance.jpg">
+	        					<div class="caption center-align">
+	          						<h5 class="light white-text">Reliance Petrol Pump</h5>
+						        	<h6 class="light white-text">Seohara</h6>
+	        					</div>
+	      					</li>
+	   					</ul>
+	  				</div>
+	  			</div>
+	  		</div>
+
+			<!-- Code for Contact Us -->
+
+			<!-- Code for Contact_us navigation section -->
+
+			<div class="row" id="contact_us">
+				<div class="card-panel blue z-depth-2">
+					<div class="card-content white-text center-align">
+						<h5 class="card-title">CONTACT US</h5>
+						<i class="material-icons">contact_mail</i>
+					</div>
+				</div>
+			</div>
+
+			<!-- Code for Contact_us text -->
+			<div class="container">
+				<div class="row hide-on-small-only valign-wrapper">
+					<div class="col l8 valign">
+						<div class="row">
+							<h5 class="blue-text">Get in touch with us</h5>
+							<div class="divider blue"></div>
+							<p class="left-align">
+							 We are specialized in the sale of surveillance and security electronic equipment.<br><br>
+							We offer a professional commercial supply and installation service in Bijnor.<br>
+							This includes CCTV equipment, access control products, electronic safe, at the best possible price with the best possible support.<br><br>
+							We are leaders in giving satisfaction and service in the provisions of quality cost effective security systems, contact us for more details.</p>
+						</div>
+					</div>
+					<div class="col l4 valign">
+						<div class="envelope" >
+							<a href="#mail"><img class="responsive-img z-depth-2 hoverable" src="images/mail2.png"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row hide-on-med-and-up">
+					<div class="col s12">
+						<div class="row">
+							<h5 class="blue-text center-align">Get in touch with us</h5>
+							<div class="divider blue"></div>
+							<p class="left-align">
+							 	We are specialized in the sale of surveillance and security electronic equipment.<br><br>
+								We offer a professional commercial supply and installation service in Bijnor.<br>
+								This includes CCTV equipment, access control products, electronic safe, at the best possible price with the best possible support.<br><br>
+								We are leaders in giving satisfaction and service in the provisions of quality cost effective security systems, contact us for more details.
+							</p>
+						</div>
+					</div>
+					<div class="col s12">
+						<div class="center-align">
+							<a href="#mail"><i class="material-icons medium">email</i></a><br>
+							<h6>Click Me</h6>
+						</div>
+							<!-- <a href="#mail" class="center-align"><img class="responsive-img z-depth-2 hoverable" src="images/mail2.png"></a> -->
 					</div>
 				</div>
 			</div>	
-		</div>	
 
-		<div class="modal" id="mail">
-			<div class="modal-content">
-				<div class="row">
-				    <form class="col s12" action="sendMail.php" method="post" enctype="multipart/form-data">
-				      	<div class="row">
-				       		<div class="input-field col s12">
-				          		<i class="material-icons prefix">account_box</i>
-				          		<input id="name" name="name" type="text" class="validate">
-				          		<label for="name">Name</label>
-				        	</div>				        	
-				      	</div>
-				      	<div class="row">
-				      		<div class="input-field col s12">
-				          		<i class="material-icons prefix">subject</i>
-				          		<input id="subject" name="subject" type="text" class="validate">
-				          		<label for="subject">Subject</label>
-				        	</div>
-				      	</div>
-				      	<div class="row">
-				      		<div class="input-field col s12">
-				      			<i class="material-icons prefix">email</i>
-				      			<input id="email" name="email" type="email" class="validate">
-				      			<label for="email" data-error="Enter a valid Email Address">Email Address</label>
+			<div class="modal" id="mail">
+				<div class="modal-content">
+					<div class="row">
+					    <form class="col s12" action="sendMail.php" method="post" enctype="multipart/form-data">
+					      	<div class="row">
+					       		<div class="input-field col s12">
+					          		<i class="material-icons prefix">account_box</i>
+					          		<input id="name" name="name" type="text" class="validate">
+					          		<label for="name">Name</label>
+					        	</div>				        	
+					      	</div>
+					      	<div class="row">
+					      		<div class="input-field col s12">
+					          		<i class="material-icons prefix">subject</i>
+					          		<input id="subject" name="subject" type="text" class="validate">
+					          		<label for="subject">Subject</label>
+					        	</div>
+					      	</div>
+					      	<div class="row">
+					      		<div class="input-field col s12">
+					      			<i class="material-icons prefix">email</i>
+					      			<input id="email" name="email" type="email" class="validate">
+					      			<label for="email" data-error="Enter a valid Email Address">Email Address</label>
+				      			</div>
 			      			</div>
-		      			</div>
-		      			<div class="row">
-		      				<div class="input-field col s12">
-		      					<i class="material-icons prefix">mode_edit</i>
-		      					<textarea id="query" name="query" class="materialize-textarea validate"></textarea>
-		      					<label for="query">Place your query here</label>
+			      			<div class="row">
+			      				<div class="input-field col s12">
+			      					<i class="material-icons prefix">mode_edit</i>
+			      					<textarea id="query" name="query" class="materialize-textarea validate"></textarea>
+			      					<label for="query">Place your query here</label>
+		      					</div>
 	      					</div>
-      					</div>
-      					<div class="row">
-      						<div class="col offset-s1">
-      							<input type="button" id="submit" value="Send" class="waves-effect waves-light btn">
-      						</div>
-  						</div>
-				    </form>
-			  	</div>
-			</div>
-			<div class="modal-footer">
-				<a class="waves-effect waves-light btn modal-close right">Close</a>
-			</div>
-		</div>
-
-		<!-- /Code for Contact_us text -->			
-
-		<!-- Code for embedded map -->
-
-		<div class="section map-responsive z-depth-2">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7207.7881177849595!2d78.58231265089724!3d29.20388309049231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bb3f4da5bc129%3A0x48a570a6c62b865b!2sRSP+Inter+College%2C+SH+49%2C+Seohara%2C+Uttar+Pradesh+246746!5e1!3m2!1sen!2sin!4v1483432727172" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>			
-
-		<!-- /Code for embedded map -->
-
-		<!-- /Code for Contact Us -->
-
-		<!-- Footer -->
-
-		<footer class="page-footer blue z-depth-2">
-			<div class="container">
-				<div class="row">
-					<div class="col s6 m6 l6">
-						<h5 class="white-text">Footer content goes here</h5>
-						<p class="white-text">Some additional content for footer</p>
-					</div>
-					<div class="col s3 m3 l3">
-						<h5 class="white-text">Contact Us</h5>
-						<div class="white-text">
-							<div class="valign-wrapper">
-								<div class="valign">
-									<i class="material-icons tiny">call</i> 01344 - 252960
-								</div>
-							</div>
-							<div class="valign-wrapper">
-								<div class="valign">
-									<i class="material-icons tiny">call</i> 8449491145
-								</div>
-							</div>
-							<div class="valign-wrapper">
-								<div class="valign">
-									<img src="images/whatsapp.png"> 9457191145
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col s3 m3 l3">
-						<div class="white-text">
-							<h5>Connect socially via</h5>
-							<a href="https://www.facebook.com" target="_blank">
-								<div class="valign-wrapper">
-									<img class="valign responsive-img" src="images/facebook.png">
-								</div>
-							</a>
-						</div>
-					</div>
+	      					<div class="row">
+	      						<div class="col offset-s1">
+	      							<input type="button" id="submit" value="Send" class="waves-effect waves-light btn">
+	      						</div>
+	  						</div>
+					    </form>
+				  	</div>
+				</div>
+				<div class="modal-footer">
+					<a class="waves-effect waves-light btn modal-close right">Close</a>
 				</div>
 			</div>
-			<div class="footer-copyright">
+
+			<!-- Code for embedded map -->
+
+			<div class="section map-responsive z-depth-2">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7207.7881177849595!2d78.58231265089724!3d29.20388309049231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bb3f4da5bc129%3A0x48a570a6c62b865b!2sRSP+Inter+College%2C+SH+49%2C+Seohara%2C+Uttar+Pradesh+246746!5e1!3m2!1sen!2sin!4v1483432727172" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>			
+
+			<!-- Footer -->
+
+			<footer class="page-footer blue z-depth-2">
 				<div class="container">
-					© 2017 Hi-Tech Solutions
+					<div class="row">
+						<div class="col l6 hide-on-small-only">
+							<h5 class="white-text">HiTech Security Solutions</h5>
+							<p class="white-text">
+								We offer a professional commercial supply and installation service in Bijnor.<br>
+								This includes CCTV equipment, access control products, electronic safe, at the best possible price with the best possible support.<br><br>
+							</p>
+						</div>
+						<div class="col s12 hide-on-med-and-up center-align">
+							<h5 class="white-text">HiTech Security Solutions</h5>
+							<p class="white-text">
+								We offer a professional commercial supply and installation service in Bijnor.<br>
+								This includes CCTV equipment, access control products, electronic safe, at the best possible price with the best possible support.<br><br>
+							</p>
+						</div>
+						<div class="col l3 hide-on-small-only">
+							<h5 class="white-text">Contact Us</h5>
+							<div class="white-text">
+								<i class="fa fa-phone" aria-hidden="true"></i> 01344 - 252960 <br>
+								<i class="fa fa-phone" aria-hidden="true"></i> 8449491145 <br>
+								<i class="fa fa-whatsapp" aria-hidden="true"></i> 9457191145
+							</div>
+						</div>
+						<div class="col s12 hide-on-med-and-up center-align">
+							<h5 class="white-text">Contact Us</h5>
+							<div class="white-text">
+								<i class="fa fa-phone" aria-hidden="true"></i> 01344 - 252960 <br>
+								<i class="fa fa-phone" aria-hidden="true"></i> 8449491145 <br>
+								<i class="fa fa-whatsapp" aria-hidden="true"></i> 9457191145
+							</div>
+						</div>
+						<div class="col l3 hide-on-small-only">
+							<div class="white-text">
+								<h5>Connect socially via</h5>
+								<a href="www.facebook.com/puneetchauhan" class="white-text"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+							</div>
+						</div>
+						<div class="col s12 hide-on-med-and-up center-align">
+								<h5 class="white-text">Connect socially via</h5>
+								<a href="www.facebook.com/puneetchauhan" class="white-text"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+						</div>
+					</div>
 				</div>
-			</div>
-		</footer>
-		<!-- /Footer -->
-		<a style="z-index: 2" class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
+				<div class="footer-copyright">
+					<div class="container">
+						<div class="center-align">
+							© 2017 Hi-Tech Security Solutions
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /Footer -->
+			<a style="z-index: 2" class="btn-floating btn-large waves-effect waves-light red scroll-to-top"><i class="material-icons">keyboard_arrow_up</i></a>
+
+		</div>		
 
 	  	<!-- Import Jquery -->
   		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -766,41 +772,26 @@
   		<!-- Import Materialize js -->
       	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
+      	<!-- Import font-awesome -->
+      	<script src="https://use.fontawesome.com/819d78ad52.js"></script>
+
   		<script type="text/javascript">
     		$(document).ready(function(){
 
     			$('#submit').off('click');
 
     			// function for full screen carousel
-     			// $('.carousel.carousel-slider').carousel({full_width: true});
+     			$('.carousel.carousel-slider').carousel({full_width: true});
+
      			$('.slider').slider({});
 
      			$('.carousel').carousel();
 
-     			var navHeight = $('nav').height();
-	  			var windowHeight = $(window).height();
-		  		var sliderHeight = windowHeight - navHeight;
-		  		var slidesHeight = sliderHeight - 30;		// 22 is the height of the indicators
-		  		$('.slider').css('height', sliderHeight);
-		  		$('.slides').css('height', slidesHeight);	
-		  		$('.change-background-size').each(function(){		// changing background-size of all images whose size is greater than required length
-		  			$(this).css('background-size', '100% 100%');
-		  		});
-				
     			// collapsible nav-bar
     			$(".button-collapse").sideNav();
 
      			// function for triggering modal
      			$('.modal').modal();     			
-
-			  	$(window).resize(function(){
-		  			windowHeight = $(window).height();
-			  		sliderHeight = windowHeight - navHeight;
-			  		slidesHeight = sliderHeight - 30;		// 22 is the height of the indicators
-			  		$('.slider').css('height', sliderHeight);
-			  		$('.slides').css('height', slidesHeight);
-			  		$('.overlay').css('height', slidesHeight);
-			  	});
 
      			// function for smooth scrolling
 			  	$('.nav-headers').click(function() {
@@ -818,7 +809,7 @@
 
 			  	// Code for scroll to top button
 			  	$(window).scroll(function(){
-			  		if($(window).scrollTop()>300)
+			  		if($(window).scrollTop()>400)	// if height is of current window > 400 then show sroll-to-top button
 			  		{
 			  			$('.scroll-to-top').fadeIn('fast');
 			  		}
