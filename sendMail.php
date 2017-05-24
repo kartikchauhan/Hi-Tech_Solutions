@@ -1,21 +1,25 @@
 <?php 
   
   require 'PHPMailer/PHPMailerAutoload.php';
+
+	$json['error_status'] = false;
+	$json['error'] = '';
+
 	class fillInfo
 	{
-		private $name;
-		private $subject;
-		private $email;
-		private $query;
+		private $_name,
+				$_subject,
+				$_email,
+				$_query;
 
-		function setName($name)
+		function setName($_name)
 		{
-			if(empty($name))
+			if(empty($_name))
 			{
-				throw new Exception('Name can not be blank');
+				$json['error'] = true;
+				return false;
 			}
-
-			$this->name = $name;
+			$this->name = $_name;
 		}
 
 		function getName()
@@ -23,14 +27,14 @@
 			return $this->name;
 		}
 
-		function setSubject($subject)
+		function setSubject($_subject)
 		{
-			if(empty($subject))
+			if(empty($_subject))
 			{
-				throw new Exception('Subject can not be empty');
+				$json['error'] = true;
+				return false;
 			}
-
-			$this->subject = $subject;
+			$this->subject = $_subject;
 		}
 
 		function getSubject()
@@ -38,14 +42,14 @@
 			return $this->subject;
 		}
 
-		function setEmail($email)
+		function setEmail($_email)
 		{
-			if(empty($email))
+			if(empty($_email))
 			{
-				throw new Exception('Email Address can not be empty');
+				$json['error'] = true;
+				return false;
 			}
-
-			$this->email = $email;
+			$this->email = $_email;
 		}
 
 		function getEmail()
@@ -53,14 +57,14 @@
 			return $this->email;
 		}
 
-		function setQuery($query)
+		function setQuery($_query)
 		{
-			if(empty($query))
+			if(empty($_query))
 			{
-				throw new Exception('Query can not be empty');
+				$json['error'] = true;
+				return false;
 			}
-
-			$this->query = $query;
+			$this->query = $_query;
 		}
 
 		function getQuery()
@@ -69,71 +73,40 @@
 		}
 	}
 
-	
 	$fillInformation = new fillInfo();
 
+	$fillInformation->setName($_POST["name"]);
+	$fillInformation->setSubject($_POST["subject"]);
+	$fillInformation->setEmail($_POST["email"]);
+	$fillInformation->setQuery($_POST["query"]);
+
+	$mail = new PHPMailer;
+	$mail->isSMTP();
+	$mail->SMTPDebug = 1;
+	$mail->Debugoutput = 'html';
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Port = 587;
+	$mail->SMTPSecure = 'tls';
+	$mail->SMTPAuth = true;
+	$mail->Username = "chauhan.kartik25@gmail.com";
+	$mail->Password = "Kartik@25K";
+
+	$mail->setFrom($fillInformation->getEmail(), $fillInformation->getName());
+	$mail->addAddress($fillInformation->getEmail(), $fillInformation->getName());
+	$mail->subject = $fillInformation->getSubject();
+	$mail->msgHTML($fillInformation->getQuery());
 	try
 	{
-		$fillInformation->setName($_POST["name"]);
-		try
-		{
-			$fillInformation->setSubject($_POST["subject"]);
-			try
-			{
-				$fillInformation->setEmail($_POST["email"]);
-				try
-				{
-					$fillInformation->setQuery($_POST["query"]);
-
-					$mail = new PHPMailer;
-					$mail->isSMTP();
-					$mail->SMTPDebug = 0;
-					$mail->Debugoutput = 'html';
-					$mail->Host = 'smtp.gmail.com';
-					$mail->Port = 587;
-					$mail->SMTPSecure = 'tls';
-					$mail->SMTPAuth = true;
-					$mail->Username = "chauhan.kartik25@gmail.com";
-					$mail->Password = "Kartik25K";
-
-					$mail->setFrom($fillInformation->getEmail(), $fillInformation->getName());
-					$mail->addAddress($fillInformation->getEmail(), $fillInformation->getName());
-					$mail->subject = $fillInformation->getSubject();
-					$mail->msgHTML($fillInformation->getQuery());
-					if (!$mail->send())
-					{
-					    echo "Mailer Error: " . $mail->ErrorInfo;
-					}
-					else
-					{
-						echo 200;
-					}
-				}
-				catch(Exception $e)
-				{
-					echo 403;	// forbidden
-					// $json->message = "Error Message: ".$e->getMessage();
-				}
-
-			}
-			catch(Exception $e)
-			{
-				echo 403;	// forbidden
-				// $json->message = "Error Message: ".$e->getMessage();
-			}
-
-		}
-		catch(Exception $e)
-		{
-			echo 403;	// forbidden
-			// $json->message = "Error Message: ".$e->getMessage();
-		}
-
+		if (!$mail->send())
+			throw new Exception("Coudn't send mail right now. Please try after few minutes");
 	}
 	catch(Exception $e)
 	{
-		echo 403;	// forbidden
-		// $json->message = "Error Message: ".$e->getMessage();
+		$json['error_status'] = true;
+		$json['error'] = $e->getMessage();
 	}
+
+	header("Content-Type: application/json", true);
+	echo json_encode($json);
 
 ?>

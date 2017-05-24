@@ -682,7 +682,7 @@
 			<div class="modal" id="mail">
 				<div class="modal-content">
 					<div class="row">
-					    <form class="col s12" action="sendMail.php" method="post" enctype="multipart/form-data">
+					    <form class="col s12" action="sendMail.php" method="post">
 					      	<div class="row">
 					       		<div class="input-field col s12">
 					          		<i class="material-icons prefix">account_box</i>
@@ -714,9 +714,22 @@
 	      					<div class="row">
 	      						<div class="col offset-s1">
 	      							<input type="button" id="submit" value="Send" class="waves-effect waves-light btn">
-	      						</div>
+	      						</div>	      						
 	  						</div>
 					    </form>
+					    <div class="preloader-wrapper active">
+						    <div class="spinner-layer spinner-red-only">
+						      	<div class="circle-clipper left">
+						        	<div class="circle"></div>
+						      	</div>
+						      	<div class="gap-patch">
+						        	<div class="circle"></div>
+						      	</div>
+						      	<div class="circle-clipper right">
+						        	<div class="circle"></div>
+						      	</div>
+					    	</div>
+  						</div>
 				  	</div>
 				</div>
 				<div class="modal-footer">
@@ -812,7 +825,9 @@
     			$(".button-collapse").sideNav();
 
      			// function for triggering modal
-     			$('.modal').modal();     			
+     			$('.modal').modal();     		
+
+     			$('.preloader-wrapper').hide();
 
      			// function for smooth scrolling
 			  	$('.nav-headers').click(function() {
@@ -829,7 +844,7 @@
 			  	});
 
 			  	// Code for scroll to top button
-			  	$(window).scroll(function(){
+			  	$(window).scroll(function() {
 			  		if($(window).scrollTop()>400)	// if height is of current window > 400 then show sroll-to-top button
 			  		{
 			  			$('.scroll-to-top').fadeIn('fast');
@@ -926,33 +941,30 @@
 			  			$('#query').focus();
 			  			return false;
 			  		}
-
+			  		$('.preloader-wrapper').show();
 			  		$.ajax({
 			  			type: "POST",
 			  			url: "sendMail.php",
 			  			data: {name: name, subject: subject, email: email, query: query},
+			  			dataType: "json",
 			  			cache: false,
 			  			success: function(response)
 			  			{
-			  				if(response==200)
+			  				// var response = JSON.parse(response);
+			  				$('.preloader-wrapper').hide();
+			  				console.log(response);
+			  				if(response.error_status == true)
+			  				{
+			  					Materialize.toast("Mail couldn't be sent, Please try again later", 4000, 'red center-align');
+			  				}
+			  				else
 			  				{
 			  					Materialize.toast('Mail sent successfully', 4000, 'green');
 			  					$('#mail').modal('close');
 			  				}
-			  				else if(response==403)
-			  				{
-			  					Materialize.toast("Mail couldn't be sent, Please try again later", 4000, 'red center-align');
-			  				}
 			  			}
-			  			// error: function(response)
-			  			// {
-			  			// 	console.log("Couldn't send the mail");
-		  				// 	console.log(response);
-			  			// }
 			  		});
-
 			  	});
-
     		});
 
     </script>
